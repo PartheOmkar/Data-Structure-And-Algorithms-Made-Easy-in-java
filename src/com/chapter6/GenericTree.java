@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class GenericTree {
 	
+//	create Generic Tree Node
 	public class GenericTreeNode{
 		int data;
 		ArrayList<GenericTreeNode> childerents;
@@ -14,6 +15,7 @@ public class GenericTree {
 	}
 	GenericTreeNode root=null;
 	
+//	Insert Data In Generic Tree if Tree is Null
 	public void insertdata(int data,int parent) {
 		GenericTreeNode newNode = new GenericTreeNode(data);
 		if(root==null) {
@@ -22,6 +24,7 @@ public class GenericTree {
 			insertdata(root,newNode,parent);
 		}
 	}
+//	insert Data In Generic Tree If Tree is Not null
 	private void insertdata(GenericTreeNode root, GenericTreeNode newNode,int parent) {
 		if(root.data==parent) {
 			root.childerents.add(newNode);
@@ -32,6 +35,7 @@ public class GenericTree {
 		}
 	}
 	
+//	Display Generic Tree
 	public void diaplayTree() {
 		displayTree(root);
 	}
@@ -44,10 +48,11 @@ public class GenericTree {
 			}
 		}
 	}
+	
 	public static void main(String[] args) {
-		
 		GenericTree t = new GenericTree();
-		
+//		To insert a node in tree you need to denote the parent of node 
+//		root node parent is 0 or -1 (you can enter any value it's not affect on root)
 		t.insertdata(0,0);
 		t.insertdata(5, 0);
 		t.insertdata(1, 0);
