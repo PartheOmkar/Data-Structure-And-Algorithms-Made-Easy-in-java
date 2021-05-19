@@ -6,7 +6,7 @@ package com.chapter7;
  	
  				1
  			2		5
- 		  3   4   6    7 	
+ 		   3        4      6         7 	
  */
 
 public class ProblemNo1 extends MinHeap{
